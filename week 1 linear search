@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+void linearsearch(int a[], int key, int size)
+{
+    int cmp=0, flag=0;
+    for(int i=0;i<size;i++)
+    {
+        cmp++;
+        if(a[i]==key)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+    cout<<"Not present "<<cmp;
+    else 
+    cout<<"Present "<<cmp;
+}
+
+int main()
+{
+    int Test;
+    cin>>Test;
+    int  key, size;
+    for(int i=0;i<Test;i++)
+    {
+        cin>>size;
+        int arr[size];
+        for(int j=0;j<size;j++)
+          cin>>arr[j];
+        cin>>key;
+         linearsearch(arr,key,size);
+    }
+      
+    return 0;
+}
